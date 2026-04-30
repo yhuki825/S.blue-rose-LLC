@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="S.blue rose合同会社は、広告業・中古車の買取販売修理・通信事業を通じて、地域社会とお客様の未来に新たな価値を届ける企業です。">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="S.blue rose合同会社｜広告・自動車・通信で未来を拓く">
+  <meta property="og:description" content="広告業・中古車の買取販売修理・通信事業を通じて、地域社会とお客様の未来に新たな価値を届けます。">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>S.blue rose合同会社｜広告・自動車・通信で未来を拓く</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #07162f;
+      --deep-blue: #0f2d5c;
+      --blue: #2563eb;
+      --blue-light: #60a5fa;
+      --cyan: #8fd8ff;
+      --white: #ffffff;
+      --snow: #f7fbff;
+      --mist: #e9f1fb;
+      --text: #172033;
+      --muted: #627086;
+      --line: rgba(15, 45, 92, 0.12);
+      --shadow: 0 24px 70px rgba(7, 22, 47, 0.14);
+      --radius-xl: 32px;
+      --content: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--snow);
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(7, 22, 47, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--content);
+      height: 78px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-family: "Outfit", sans-serif;
+      font-size: 1.24rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-mark {
+      position: relative;
+      display: inline-grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #ffffff 0 8%, #9bd8ff 9% 24%, #3b82f6 25% 54%, #102a57 55% 100%);
+      box-shadow: 0 0 34px rgba(96, 165, 250, 0.45);
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.48);
+      border-radius: 50%;
+    }
+
+    .global-nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .global-nav a {
+      position: relative;
+      transition: color 0.25s ease;
+    }
+
+    .global-nav a::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      margin: auto;
+      border-radius: 999px;
+      background: var(--cyan);
+      transition: width 0.25s ease;
+    }
+
+    .global-nav a:hover { color: var(--white); }
+    .global-nav a:hover::after { width: 100%; }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        linear-gradient(115deg, rgba(7, 22, 47, 0.94) 0%, rgba(12, 37, 78, 0.88) 44%, rgba(37, 99, 235, 0.36) 100%),
+        url("https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=2200&q=85") center / cover;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      top: 14%;
+      right: -120px;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(143, 216, 255, 0.34), rgba(143, 216, 255, 0));
+    }
+
+    .hero::after {
+      bottom: -180px;
+      left: -160px;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(184, 199, 255, 0.26), rgba(184, 199, 255, 0));
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+      align-items: center;
+      gap: 56px;
+      max-width: var(--content);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 138px 24px 76px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: #cfeeff;
+      font-family: "Outfit", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 36px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.55rem, 6vw, 5.65rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.05em;
+    }
+
+    .hero h1 .accent {
+      display: inline-block;
+      margin-top: 8px;
+      color: transparent;
+      background: linear-gradient(90deg, #ffffff, #bde9ff 45%, #a9bfff);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero-lead {
+      max-width: 650px;
+      margin: 28px 0 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      line-height: 2;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .button-primary {
+      color: var(--navy);
+      background: linear-gradient(135deg, #ffffff, #bfe8ff);
+      box-shadow: 0 18px 44px rgba(96, 165, 250, 0.28);
+    }
+
+    .button-secondary {
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 54px rgba(8, 31, 68, 0.26);
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 28px 100px rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      z-index: -1;
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.02));
+    }
+
+    .hero-card-title {
+      margin: 0 0 18px;
+      font-family: "Outfit", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #cfeeff;
+    }
+
+    .value-list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .value-list li {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .value-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 14px;
+      background: rgba(143, 216, 255, 0.18);
+      color: #dff4ff;
+      font-weight: 900;
+    }
+
+    .value-list strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--white);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .value-list span {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.86rem;
+      line-height: 1.7;
+    }
+
+    .section { padding: 112px 24px; }
+    .section-inner { max-width: var(--content); margin: 0 auto; }
+
+    .section-heading {
+      max-width: 830px;
+      margin-bottom: 54px;
+    }
+
+    .section-heading.center {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-family: "Outfit", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+    }
+
+    .section-description {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .image-panel {
+      position: relative;
+      min-height: 500px;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(7, 22, 47, 0) 42%, rgba(7, 22, 47, 0.62) 100%),
+        url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85") center / cover;
+      box-shadow: var(--shadow);
+    }
+
+    .image-panel-badge {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      left: 24px;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 24px;
+      color: var(--white);
+      background: rgba(7, 22, 47, 0.5);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .image-panel-badge strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 2.6rem;
+      line-height: 1;
+      font-family: "Outfit", sans-serif;
+    }
+
+    .about-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .philosophy-box {
+      margin-top: 28px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(233, 241, 251, 0.78));
+    }
+
+    .philosophy-box strong { color: var(--deep-blue); }
+
+    .services {
+      background:
+        radial-gradient(circle at 12% 0%, rgba(143, 216, 255, 0.28), transparent 30%),
+        linear-gradient(180deg, #ffffff, #f3f8ff);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 18px 58px rgba(7, 22, 47, 0.08);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-image {
+      height: 210px;
+      overflow: hidden;
+      background: var(--mist);
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.48s ease;
+    }
+
+    .service-card:hover .service-image img { transform: scale(1.08); }
+
+    .service-content { padding: 30px; }
+
+    .service-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 20px;
+      border-radius: 18px;
+      color: var(--white);
+      font-family: "Outfit", sans-serif;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--deep-blue), var(--blue));
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.24);
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 1.28rem;
+      line-height: 1.45;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 56px;
+    }
+
+    .strength-item {
+      padding: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 24px;
+      color: var(--white);
+      background: linear-gradient(145deg, rgba(15, 45, 92, 0.98), rgba(37, 99, 235, 0.84));
+      box-shadow: 0 20px 54px rgba(15, 45, 92, 0.18);
+    }
+
+    .strength-item strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+
+    .strength-item span {
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.9rem;
+    }
+
+    .company {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .company::before {
+      content: "";
+      position: absolute;
+      top: -180px;
+      right: -160px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(96, 165, 250, 0.28), transparent 62%);
+    }
+
+    .company .section-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .company-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 42px;
+      align-items: stretch;
+    }
+
+    .company-card,
+    .access-card {
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .company-card { padding: 34px; }
+
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .company-table tr { border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+    .company-table tr:last-child { border-bottom: 0; }
+
+    .company-table th,
+    .company-table td {
+      padding: 18px 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .company-table th {
+      width: 34%;
+      color: #9bd8ff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .company-table td {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+    }
+
+    .access-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .map-visual {
+      position: relative;
+      min-height: 300px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(7, 22, 47, 0.12), rgba(37, 99, 235, 0.12)),
+        url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=85") center / cover;
+    }
+
+    .map-visual::after {
+      content: "Saitama, Kazo";
+      position: absolute;
+      right: 24px;
+      bottom: 22px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--white);
+      font-family: "Outfit", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      background: rgba(7, 22, 47, 0.66);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .access-content { padding: 30px; }
+
+    .access-content h3 {
+      margin: 0 0 12px;
+      color: #cfeeff;
+      font-family: "Outfit", sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .access-content p {
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .map-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-weight: 800;
+    }
+
+    .map-link::after {
+      content: "→";
+      color: var(--cyan);
+      transition: transform 0.25s ease;
+    }
+
+    .map-link:hover::after { transform: translateX(4px); }
+
+    .footer {
+      color: rgba(255, 255, 255, 0.62);
+      background: #050d1d;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: 38px 24px;
+    }
+
+    .footer-brand {
+      margin: 0 0 6px;
+      color: var(--white);
+      font-family: "Outfit", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .footer small { font-size: 0.78rem; }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .footer-nav a:hover { color: var(--white); }
+
+    @media (max-width: 920px) {
+      .global-nav { gap: 16px; font-size: 0.8rem; }
+      .hero-inner,
+      .about-grid,
+      .company-grid { grid-template-columns: 1fr; }
+      .hero-inner { gap: 34px; }
+      .hero-card { max-width: 560px; }
+      .service-grid,
+      .strength-grid { grid-template-columns: 1fr; }
+      .image-panel { min-height: 400px; }
+    }
+
+    @media (max-width: 680px) {
+      .header-inner { height: 68px; padding: 0 18px; }
+      .brand { font-size: 1rem; }
+      .brand-mark { width: 32px; height: 32px; }
+      .global-nav { display: none; }
+      .hero-inner { padding: 112px 18px 58px; }
+      .hero-actions { flex-direction: column; }
+      .button { width: 100%; }
+      .section { padding: 82px 18px; }
+      .section-heading { margin-bottom: 36px; }
+      .service-content,
+      .company-card,
+      .access-content { padding: 24px; }
+      .company-table,
+      .company-table tbody,
+      .company-table tr,
+      .company-table th,
+      .company-table td { display: block; width: 100%; }
+      .company-table th { padding: 18px 0 4px; }
+      .company-table td { padding: 0 0 18px; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="S.blue rose合同会社 ホームへ">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>S.blue rose</span>
+      </a>
+      <nav class="global-nav" aria-label="主要ナビゲーション">
+        <a href="#about">私たちについて</a>
+        <a href="#services">事業内容</a>
+        <a href="#strength">選ばれる理由</a>
+        <a href="#company">会社概要</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">S.blue rose LLC</p>
+          <h1>不可能を可能にし、<br><span class="accent">未来に価値を咲かせる。</span></h1>
+          <p class="hero-lead">広告、自動車、通信。S.blue rose合同会社は、暮らしとビジネスに欠かせない領域を横断し、お客様の課題に寄り添いながら、次の一歩につながる実用的なソリューションを提供します。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#services">事業内容を見る</a>
+            <a class="button button-secondary" href="#company">会社概要を見る</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="事業領域の概要">
+          <p class="hero-card-title">Business Domains</p>
+          <ul class="value-list">
+            <li><span class="value-icon">01</span><span><strong>広告業</strong>目的に合わせた訴求設計で、認知拡大と集客を支援します。</span></li>
+            <li><span class="value-icon">02</span><span><strong>中古車の買取・販売修理</strong>安心して相談できるカーライフのパートナーを目指します。</span></li>
+            <li><span class="value-icon">03</span><span><strong>通信事業</strong>個人・法人の利用環境に合わせて、快適な通信環境づくりを支えます。</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-inner about-grid">
+        <div class="image-panel" aria-label="洗練されたオフィスイメージ">
+          <div class="image-panel-badge">
+            <strong>03</strong>
+            <span>広告・自動車・通信を軸に、暮らしと事業の可能性を広げます。</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div class="section-heading">
+            <span class="section-kicker">Our Vision</span>
+            <h2 class="section-title">青いバラのように、まだ見ぬ可能性をかたちに。</h2>
+            <p class="section-description">S.blue rose合同会社は、変化の速い時代において、多角的な事業展開を通じてお客様と地域社会に新しい選択肢を届ける会社です。</p>
+          </div>
+          <p>私たちが大切にしているのは、単にサービスを提供するだけではなく、お客様が抱える背景や目的を丁寧に理解し、現実的で継続しやすい方法を一緒に考えることです。広告・自動車・通信という異なる領域をつなぐことで、より柔軟で実用性の高い提案を行います。</p>
+          <p>かつて青いバラは「不可能」の象徴でしたが、技術の進歩によって実現し、現在では「夢かなう」という意味を持つ花として知られています。S.blue rose合同会社も、固定観念にとらわれない姿勢で、一つひとつのご相談に誠実に向き合います。</p>
+          <div class="philosophy-box"><strong>企業姿勢：</strong>お客様の目的に寄り添い、必要な情報をわかりやすく整理し、納得感のある提案と丁寧な対応を積み重ねます。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-inner">
+        <div class="section-heading center">
+          <span class="section-kicker">Services</span>
+          <h2 class="section-title">暮らしとビジネスを支える3つの事業</h2>
+          <p class="section-description">それぞれの専門性を活かしながら、地域のお客様が安心して相談できる身近な企業を目指しています。</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-image"><img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=900&q=85" alt="広告戦略を検討するビジネスシーン"></div>
+            <div class="service-content"><span class="service-number">01</span><h3>広告業</h3><p>目的やターゲットに合わせたプロモーション設計を行い、伝えたい価値が正しく届くように支援します。認知拡大、集客、販売促進など、事業課題に応じた広告展開をサポートします。</p></div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=85" alt="整備された自動車のイメージ"></div>
+            <div class="service-content"><span class="service-number">02</span><h3>中古車の買取・販売修理</h3><p>中古車の買取、販売、修理に関するご相談に対応します。車両の状態やご要望を踏まえ、安心してカーライフを続けられるよう、丁寧でわかりやすい対応を心がけています。</p></div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image"><img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=85" alt="通信ネットワークとビジネスのイメージ"></div>
+            <div class="service-content"><span class="service-number">03</span><h3>通信事業</h3><p>個人利用から法人利用まで、日々の活動に欠かせない通信環境づくりをサポートします。利用状況や目的を整理し、快適性と使いやすさを重視した提案を行います。</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="strength" class="section">
+      <div class="section-inner">
+        <div class="section-heading center">
+          <span class="section-kicker">Strength</span>
+          <h2 class="section-title">柔軟な発想と誠実な対応で、<br>安心を積み重ねる。</h2>
+          <p class="section-description">複数領域で培った視点を活かし、目の前のご相談に対して必要な情報を整理しながら、<br>わかりやすい提案へとつなげます。</p>
+        </div>
+
+        <div class="strength-grid">
+          <div class="strength-item"><strong>多角的な視点</strong><span>広告・自動車・通信という異なる事業領域を横断し、状況に応じた柔軟な考え方で課題解決に向き合います。</span></div>
+          <div class="strength-item"><strong>地域に根ざした姿勢</strong><span>埼玉県加須市を拠点に、地域のお客様が相談しやすい身近なパートナーとして、丁寧な関係づくりを大切にします。</span></div>
+          <div class="strength-item"><strong>わかりやすい提案</strong><span>専門的な内容もできるだけ平易に整理し、納得して判断できる情報提供とコミュニケーションを心がけています。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="section company">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span class="section-kicker">Company</span>
+          <h2 class="section-title" style="color: #ffffff;">会社概要</h2>
+          <p class="section-description" style="color: rgba(255,255,255,0.72);">S.blue rose合同会社の基本情報です。所在地や事業内容をご確認いただけます。</p>
+        </div>
+
+        <div class="company-grid">
+          <div class="company-card">
+            <table class="company-table">
+              <tbody>
+                <tr><th scope="row">Company</th><td>S.blue rose合同会社</td></tr>
+                <tr><th scope="row">Representative</th><td>山内 明子</td></tr>
+                <tr><th scope="row">Address</th><td>〒347-0011<br>埼玉県加須市北小浜1052-6</td></tr>
+                <tr><th scope="row">Business</th>
+                  <td>
+                    <ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0;">
+                      <li>広告業</li>
+                      <li>中古車の買取、販売、修理</li>
+                      <li>通信事業</li>
+                    </ul>
+                  </td>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="access-card">
+            <div class="map-visual" aria-label="埼玉県加須市周辺を想起させる地図イメージ"></div>
+            <div class="access-content">
+              <h3>Access</h3>
+              <p>東北自動車道 加須ICからお車でアクセスしやすい立地です。所在地の詳細は、地図サービスにてご確認ください。</p>
+              <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%8A%A0%E9%A0%88%E5%B8%82%E5%8C%97%E5%B0%8F%E6%B5%9C1052-6" target="_blank" rel="noopener noreferrer">Google マップで確認する</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">S.blue rose LLC</p>
+        <small>&copy; 2026 S.blue rose合同会社. All Rights Reserved.</small>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#strength">Strength</a>
+        <a href="#company">Company</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', (event) => {
+        const targetId = anchor.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        event.preventDefault();
+        const headerHeight = document.querySelector('.site-header')?.offsetHeight || 0;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
